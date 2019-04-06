@@ -1,0 +1,10 @@
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 400 Bad Request
+    {
+      "code" : 400,
+      "errors" : [ {
+        "domain" : "usageLimits",
+        "message" : "Bad Request",
+        "reason" : "keyInvalid"
+      } ],
+      "message" : "Bad Request"
+    }
