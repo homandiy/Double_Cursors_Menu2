@@ -41,7 +41,7 @@ public class Response{
 	@Override
  	public String toString(){
 		return
-			"Response{" +
+			"SearchData{" +
 			"code = '" + code + '\'' +
 			",message = '" + message + '\'' +
 			",errors = '" + errors + '\'' +

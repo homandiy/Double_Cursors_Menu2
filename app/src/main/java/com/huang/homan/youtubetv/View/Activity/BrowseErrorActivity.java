@@ -53,13 +53,13 @@ public class BrowseErrorActivity extends Activity {
         mErrorFragment = new ErrorFragment();
         getFragmentManager()
                 .beginTransaction()
-                .add(R.id.main_browse_fragment, mErrorFragment)
+                .add(R.id.fragmentContainer, mErrorFragment)
                 .commit();
 
         mSpinnerFragment = new SpinnerFragment();
         getFragmentManager()
                 .beginTransaction()
-                .add(R.id.main_browse_fragment, mSpinnerFragment)
+                .add(R.id.fragmentContainer, mSpinnerFragment)
                 .commit();
 
         final Handler handler = new Handler();

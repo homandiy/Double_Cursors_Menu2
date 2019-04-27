@@ -29,7 +29,7 @@ public class YouTubeSearch extends AsyncTask<String, Void, List<SearchResult>> {
         this.youTube = youTube;
         YouTubeConfig youTubeConfig = new YouTubeConfig();
         this.YOUR_API_KEY = youTubeConfig.getApiKey();
-        this.maxResult = youTubeConfig.getMaxResult();
+        this.maxResult = youTubeConfig.getMaxResults();
         this.presenter = presenter;
     }
 

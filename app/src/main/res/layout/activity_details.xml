@@ -5,5 +5,4 @@
     android:name="com.huang.homan.youtubetv.View.Fragment.VideoDetailsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.Activity.DetailsActivity"
-    tools:deviceIds="tv" />
+    tools:context=".View.Activity.DetailsActivity" />

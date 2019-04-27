@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CursorMenu">
+        <attr name="FontSize" format="reference|dimension"/>
+        <attr name="EnlargeRate" format="reference|float"/>
+        <attr name="NormalFontColor" format="reference|color"/>
+        <attr name="SelectedFontColor" format="reference|color"/>
+        <attr name="OutlineFontColor" format="reference|color"/>
+        <attr name="StartPosition" format="reference|integer"/>
+
+        <attr name="WidthMode" format="reference|string"/>
+        <attr name="ItemSpace" format="reference|dimension"/>
+    </declare-styleable>
+</resources>

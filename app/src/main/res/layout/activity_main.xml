@@ -7,41 +7,83 @@
     android:name="com.huang.homan.youtubetv.View.Fragment.MainFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sand_snowman"
     tools:context=".View.Activity.MainActivity"
     tools:deviceIds="tv"
-    tools:ignore="MergeRootFrame" >
-
-    <FrameLayout
-        android:id="@+id/mainFL"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <fragment
-            android:id="@+id/main_browse_fragment"
-            android:name="com.huang.homan.youtubetv.View.Fragment.MainFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </FrameLayout>
+    tools:ignore="MergeRootFrame">
 
     <TextView
         android:id="@+id/target"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="360dp"
-        android:layout_marginTop="172dp"
-        android:background="@color/background_gradient_end"
-        android:fontFamily="cursive"
-        android:text="Hello"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="serif"
+        android:nextFocusDown="@id/menuBar"
+        android:text="@string/i_m_info_bar"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="48sp"
+        android:textColor="@color/search_opaque"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:typeface="normal"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.huang.homan.youtubetv.View.widget.CursorView
+        android:id="@+id/cursorViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/my_star"
+        app:layout_constraintBottom_toTopOf="@id/menuBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <com.huang.homan.youtubetv.View.widget.CursorMenu
+        android:id="@+id/menuBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:focusable="auto"
+        android:focusableInTouchMode="false"
+        android:nextFocusUp="@id/target"
+        android:nextFocusDown="@id/pageContent"
+        android:touchscreenBlocksFocus="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.huang.homan.youtubetv.View.widget.CursorMenu>
+
+    <com.huang.homan.youtubetv.View.widget.CursorView
+        android:id="@+id/cursorViewBase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/my_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuBar"
+        tools:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:nextFocusUp="@id/menuBar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cursorViewBase"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
